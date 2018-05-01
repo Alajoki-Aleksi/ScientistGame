@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour {
 
 	public float moveSpeed;
 	public float jumpLimit;
-
+    Animator anim;
 	private Rigidbody2D thisRigidbody;
 	private Collider2D thisCollider;
 	int jumpForce = 0;
@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
 		thisRigidbody = GetComponent<Rigidbody2D>();
 		thisCollider = GetComponent<Collider2D>();
+        anim = GetComponent<Animator>();
 	}
 
 	// Update is called once per frame
@@ -43,13 +44,16 @@ public class PlayerController : MonoBehaviour {
 		// Pelaajan liikkumisnopeudet
 		if (slowdown) {
 			thisRigidbody.velocity = new Vector2 (-(moveSpeed * 4f), thisRigidbody.velocity.y);
+            anim.SetInteger("State", 3);
 		} 
 		else if (speedup) {
 			thisRigidbody.velocity = new Vector2 ((moveSpeed * 3f), thisRigidbody.velocity.y);
-		} 
+            anim.SetInteger("State", 1);
+        } 
 		else {
 			thisRigidbody.velocity = new Vector2 (moveSpeed, thisRigidbody.velocity.y);
-		}
+            anim.SetInteger("State", 0);
+        }
 
 
 		// Hyppääminen
@@ -59,7 +63,8 @@ public class PlayerController : MonoBehaviour {
 				if (jumpForce < jumpLimit) {
 					jumpForce++;
 					thisRigidbody.velocity = new Vector2 (thisRigidbody.velocity.x, jumpForce);
-				}
+                    anim.SetInteger("State", 2);
+                }
 			} 
 			else {
 				jumpForce = 0;
