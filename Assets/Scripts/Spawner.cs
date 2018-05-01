@@ -9,6 +9,8 @@ public class Spawner : MonoBehaviour {
     private float lastSpawned;
     private Vector3 lastPlayerPosition;
 
+    public Sprite[] ObstacleSprite;
+
     public GameObject Obstacle;
 
     // Use this for initialization
@@ -29,7 +31,40 @@ public class Spawner : MonoBehaviour {
 
     public void SpawnObstacle()
     {
+        GameObject Clone;
         Vector3 pos = lastPlayerPosition + new Vector3(lastPlayerPosition.x + 20, Random.Range(-2.5f, 10), 0);
-        Instantiate(Obstacle, pos, Quaternion.identity);
+        Clone = Instantiate(Obstacle, pos, Quaternion.identity);
+
+        int Randomizer = Random.Range(1, 6);
+
+        if (Randomizer == 1)
+        {
+            Clone.GetComponent<SpriteRenderer>().sprite = ObstacleSprite[0];
+        }
+        if (Randomizer == 2)
+        {
+            Clone.GetComponent<SpriteRenderer>().sprite = ObstacleSprite[1];
+        }
+        if (Randomizer == 3)
+        {
+            Clone.GetComponent<SpriteRenderer>().sprite = ObstacleSprite[2];
+        }
+        if (Randomizer == 4)
+        {
+            Clone.GetComponent<SpriteRenderer>().sprite = ObstacleSprite[3];
+        }
+        if (Randomizer == 5)
+        {
+            Clone.GetComponent<SpriteRenderer>().sprite = ObstacleSprite[4];
+        }
+        if (Randomizer == 6)
+        {
+            Clone.GetComponent<SpriteRenderer>().sprite = ObstacleSprite[5];
+        }
+        if (Randomizer == 7)
+        {
+            Clone.GetComponent<SpriteRenderer>().sprite = ObstacleSprite[6];
+        }
+        
     }
     }

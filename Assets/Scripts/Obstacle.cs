@@ -15,5 +15,6 @@ public class Obstacle : MonoBehaviour {
     void FixedUpdate()
     {
         rb.AddForce(transform.right * thrust);
+        rb.AddForce(transform.eulerAngles=Vector3.forward);
     }
 }
