@@ -12,10 +12,9 @@ public class Obstacle : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void FixedUpdate()
+    void Update()
     {
         rb.AddForce(transform.right * thrust);
-        rb.AddForce(transform.eulerAngles=Vector3.forward);
         rb.MoveRotation(rb.rotation + 2 * Time.fixedDeltaTime);
     }
 }
