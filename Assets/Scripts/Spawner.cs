@@ -35,7 +35,7 @@ public class Spawner : MonoBehaviour {
         Vector3 pos = lastPlayerPosition + new Vector3(lastPlayerPosition.x + 20, Random.Range(-2.5f, 10), 0);
         Clone = Instantiate(Obstacle, pos, Quaternion.identity);
 
-        int Randomizer = Random.Range(1, 6);
+        int Randomizer = Random.Range(1, 7);
 
         if (Randomizer == 1)
         {
@@ -61,10 +61,7 @@ public class Spawner : MonoBehaviour {
         {
             Clone.GetComponent<SpriteRenderer>().sprite = ObstacleSprite[5];
         }
-        if (Randomizer == 7)
-        {
-            Clone.GetComponent<SpriteRenderer>().sprite = ObstacleSprite[6];
-        }
+        
         
     }
     }
