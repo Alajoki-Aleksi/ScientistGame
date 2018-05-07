@@ -366,7 +366,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 228287804}
-  button: {fileID: 1249826587126066, guid: 2d29767dff02f754fb25bb6ce4938686, type: 2}
+  restartButton: {fileID: 1249826587126066, guid: 2d29767dff02f754fb25bb6ce4938686,
+    type: 2}
+  quitButton: {fileID: 1073271653509390, guid: cd8d94295702acb4896e4cc4726558e5, type: 2}
 --- !u!4 &381129233 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4903334215170024, guid: daf03f690b91d404386e4ad34ad441c8,
