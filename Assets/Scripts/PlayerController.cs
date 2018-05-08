@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour {
 	public float moveSpeed;
 	public float jumpLimit;
 	Animator anim;
+    AudioSource sound;
 
 	private Rigidbody2D thisRigidbody;
 	private Collider2D thisCollider;
@@ -23,6 +24,7 @@ public class PlayerController : MonoBehaviour {
 		thisRigidbody = GetComponent<Rigidbody2D>();
 		thisCollider = GetComponent<Collider2D>();
 		anim = GetComponent<Animator>();
+        sound = GetComponent<AudioSource>();
 	}
 
 	// Update is called once per frame
@@ -60,11 +62,12 @@ public class PlayerController : MonoBehaviour {
 		// Hyppääminen
 		if (hasJumped == false) {
 			if (jump) {
-				
-				if (jumpForce < jumpLimit) {
+                sound.Play();
+                if (jumpForce < jumpLimit) {
 					jumpForce++;
 					thisRigidbody.velocity = new Vector2 (thisRigidbody.velocity.x, jumpForce);
 					anim.SetInteger("State", 2);
+                    
 				}
 			} 
 			else {
