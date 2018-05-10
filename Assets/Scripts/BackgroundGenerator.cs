@@ -16,21 +16,26 @@ public class BackgroundGenerator : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (transform.position.x < generationPoint.position.x) {
+		if (backgroundType == 0) {
+			if (transform.position.x + 90 < generationPoint.position.x) {
 
-//			transform.position = new Vector3(transform.position.x + 106f, transform.position.y, transform.position.z);
-//			transform.position = new Vector3(transform.position.x + 136f, transform.position.y + 15f, transform.position.z);
 
-			if (backgroundType == 1) {
-				transform.position = new Vector3(transform.position.x + 54.9f, transform.position.y - 14.783f, transform.position.z);
-				Instantiate (background1, transform.position, transform.rotation);
-				backgroundType = 0;
-			} 
-			else {
-				transform.position = new Vector3(transform.position.x + 187.54f, transform.position.y + 14.783f, transform.position.z);
+				transform.position = new Vector3 (transform.position.x + 187.54f, transform.position.y + 14.783f, transform.position.z);
 				Instantiate (background2, transform.position, transform.rotation);
 				backgroundType = 1;
 			}
+		} else {
+			if (transform.position.x + 40 < generationPoint.position.x) {
+
+				//			transform.position = new Vector3(transform.position.x + 106f, transform.position.y, transform.position.z);
+				//			transform.position = new Vector3(transform.position.x + 136f, transform.position.y + 15f, transform.position.z);
+
+					transform.position = new Vector3(transform.position.x + 54.9f, transform.position.y - 14.783f, transform.position.z);
+					Instantiate (background1, transform.position, transform.rotation);
+					backgroundType = 0;
+
+			}
 		}
+
 	}
 }
