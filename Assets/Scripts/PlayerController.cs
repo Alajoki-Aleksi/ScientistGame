@@ -62,13 +62,14 @@ public class PlayerController : MonoBehaviour {
 		// Hyppääminen
 		if (hasJumped == false) {
 			if (jump) {
-                sound.Play();
+
                 if (jumpForce < jumpLimit) {
 					jumpForce++;
 					thisRigidbody.velocity = new Vector2 (thisRigidbody.velocity.x, jumpForce);
 					anim.SetInteger("State", 2);
-                    
+					sound.Play();
 				}
+
 			} 
 			else {
 				jumpForce = 0;

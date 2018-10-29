@@ -32,35 +32,66 @@ public class Spawner : MonoBehaviour {
     public void SpawnObstacle()
     {
         GameObject Clone;
-        Vector3 pos = lastPlayerPosition + new Vector3(lastPlayerPosition.x + 20, Random.Range(-2.5f, 10), 0);
+        Vector3 pos = lastPlayerPosition + new Vector3(30, Random.Range(-2.5f, 10), 0);
         Clone = Instantiate(Obstacle, pos, Quaternion.identity);
 
-        int Randomizer = Random.Range(1, 7);
+		int backgroundType = GameObject.Find ("BackgroundGenerator").GetComponent<BackgroundGenerator> ().backgroundType;
+		Debug.Log ("Background type: " + backgroundType);
 
-        if (Randomizer == 1)
-        {
-            Clone.GetComponent<SpriteRenderer>().sprite = ObstacleSprite[0];
-        }
-        if (Randomizer == 2)
-        {
-            Clone.GetComponent<SpriteRenderer>().sprite = ObstacleSprite[1];
-        }
-        if (Randomizer == 3)
-        {
-            Clone.GetComponent<SpriteRenderer>().sprite = ObstacleSprite[2];
-        }
-        if (Randomizer == 4)
-        {
-            Clone.GetComponent<SpriteRenderer>().sprite = ObstacleSprite[3];
-        }
-        if (Randomizer == 5)
-        {
-            Clone.GetComponent<SpriteRenderer>().sprite = ObstacleSprite[4];
-        }
-        if (Randomizer == 6)
-        {
-            Clone.GetComponent<SpriteRenderer>().sprite = ObstacleSprite[5];
-        }
+		if (backgroundType == 1) {
+			int Randomizer = Random.Range (1, 8);
+			if (Randomizer == 1) {
+				Clone.GetComponent<SpriteRenderer> ().sprite = ObstacleSprite [0];
+				Clone.AddComponent<PolygonCollider2D> ();
+			}
+			if (Randomizer == 2) {
+				Clone.GetComponent<SpriteRenderer> ().sprite = ObstacleSprite [1];
+				Clone.AddComponent<PolygonCollider2D> ();
+			}
+			if (Randomizer == 3) {
+				Clone.GetComponent<SpriteRenderer> ().sprite = ObstacleSprite [2];
+				Clone.AddComponent<PolygonCollider2D> ();
+			}
+			if (Randomizer == 4) {
+				Clone.GetComponent<SpriteRenderer> ().sprite = ObstacleSprite [3];
+				Clone.AddComponent<PolygonCollider2D> ();
+			}
+			if (Randomizer == 5) {
+				Clone.GetComponent<SpriteRenderer> ().sprite = ObstacleSprite [4];
+				Clone.AddComponent<PolygonCollider2D> ();
+			}
+			if (Randomizer == 6) {
+				Clone.GetComponent<SpriteRenderer> ().sprite = ObstacleSprite [5];
+				Clone.AddComponent<PolygonCollider2D> ();
+			}
+			if (Randomizer == 7) {
+				Clone.GetComponent<SpriteRenderer> ().sprite = ObstacleSprite [6];
+				Clone.AddComponent<PolygonCollider2D> ();
+			}
+		} else {
+			int Randomizer = Random.Range (1, 6);
+			if (Randomizer == 1) {
+				Clone.GetComponent<SpriteRenderer> ().sprite = ObstacleSprite [7];
+				Clone.AddComponent<PolygonCollider2D> ();
+			}
+			if (Randomizer == 2) {
+				Clone.GetComponent<SpriteRenderer> ().sprite = ObstacleSprite [8];
+				Clone.AddComponent<PolygonCollider2D> ();
+			}
+			if (Randomizer == 3) {
+				Clone.GetComponent<SpriteRenderer> ().sprite = ObstacleSprite [9];
+				Clone.AddComponent<PolygonCollider2D> ();
+			}
+			if (Randomizer == 4) {
+				Clone.GetComponent<SpriteRenderer> ().sprite = ObstacleSprite [10];
+				Clone.AddComponent<PolygonCollider2D> ();
+			}
+			if (Randomizer == 5) {
+				Clone.GetComponent<SpriteRenderer> ().sprite = ObstacleSprite [11];
+				Clone.AddComponent<PolygonCollider2D> ();
+			}
+		}
+        
         
         
     }
