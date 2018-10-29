@@ -21,6 +21,7 @@ public class Killzone : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		speed += 0.0001f;
 		thisRigidbody.velocity = new Vector2 (speed, thisRigidbody.velocity.y);
 	}
 }
