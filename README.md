@@ -7,15 +7,17 @@ Controls: Move with the arrow keys, jump with spacebar
 
 # Credits:
 
-Aleksi Alajoki    - Controls and points, generating backgrounds and platforms
+The 6th Wheel
 
-Aleksis Viinikka  - Menus, music and sound effects
+Aleksi Alajoki    - Programming: controls and points, generating backgrounds and platforms
 
-Antton Valkama    - Obstacle programming and implementing animations
+Aleksis Viinikka  - Programming: menus, music and sound effects
 
-Anne Peltola      - Obstacle graphics and animations
+Antton Valkama    - Programming: obstacles and implementing animations
 
-Noora Virtala     - Background graphics
+Anne Peltola      - Art: obstacle graphics and animations
+
+Noora Virtala     - Art: background graphics
 
 
 
