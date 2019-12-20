@@ -2,7 +2,7 @@
 
 The goal of the game is to survive as long as possible. Beware of the black hole on the left, and don't get caught up in the debris!
 
-Controls: Move with the arrow keys, jump with spacebar
+Controls: Move with the arrow keys, jump with spacebar.
 
 The build has been included in the "Playable Build" folder for portfolio purposes.
 
