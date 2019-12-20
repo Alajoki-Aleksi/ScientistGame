@@ -4,6 +4,7 @@ The goal of the game is to survive as long as possible. Beware of the black hole
 
 Controls: Move with the arrow keys, jump with spacebar
 
+The build has been included in the "Playable Build" folder for portfolio purposes.
 
 # Credits:
 
